@@ -1,0 +1,216 @@
+\RequirePackage{fixltx2e}
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage[american]{babel}
+
+\usepackage{graphicx}
+
+%extended enumerate, such as \begin{compactenum}
+\usepackage{paralist}
+
+%put figures inside a text
+%\usepackage{picins}
+%use
+%\piccaptioninside
+%\piccaption{...}
+%\parpic[r]{\includegraphics ...}
+%Text...
+
+%Sorts the citations in the brackets
+%\usepackage{cite}
+
+%for easy quotations: \enquote{text}
+\usepackage{csquotes}
+
+\usepackage[T1]{fontenc}
+
+%better font, similar to the default springer font
+\usepackage{lmodern}
+%if more space is needed, exchange lmodern by mathptmx
+%\usepackage{mathptmx}
+
+%enable margin kerning
+\usepackage{microtype}
+
+%for demonstration purposes only
+\usepackage[math]{blindtext}
+
+\usepackage{ifxetex,ifluatex}
+\ifxetex
+  \usepackage{fontspec,xltxtra,xunicode}
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\else
+  \ifluatex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+    \newcommand{\euro}{€}
+  \else
+    \usepackage[utf8]{inputenc}
+    \usepackage{eurosym}
+  \fi
+\fi
+
+
+\makeatletter
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                       {-18\p@ \@plus -4\p@ \@minus -4\p@}%
+                       {4\p@ \@plus 2\p@ \@minus 2\p@}%
+                       {\normalfont\normalsize\bfseries\boldmath
+                        \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                       {-12\p@ \@plus -4\p@ \@minus -4\p@}%
+                       {2\p@ \@plus 1\p@ \@minus 1\p@}%
+                       {\normalfont\normalsize\itshape
+                        \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
+\makeatother
+
+
+%\usepackage[capitalise,nameinlink]{cleveref}
+%Nice formats for \cref
+%\crefname{section}{Sect.}{Sect.}
+%\Crefname{section}{Section}{Sections}
+%\crefname{figure}{Fig.}{Fig.}
+%\Crefname{figure}{Figure}{Figures}
+
+\usepackage{xspace}
+%\newcommand{\eg}{e.\,g.\xspace}
+%\newcommand{\ie}{i.\,e.\xspace}
+\newcommand{\eg}{e.\,g.,\ }
+\newcommand{\ie}{i.\,e.,\ }
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyvrb}
+%\DefineShortVerb[commandchars=\\\{\}]{\|}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex,
+              colorlinks=true,
+              linkcolor=blue]{hyperref}
+\else
+%  \usepackage[unicode=true,
+%              colorlinks=true,
+%              linkcolor=blue]{hyperref}
+    %unobstrusive usage of hyperref
+    \ifnum\pdfoutput>0
+        \usepackage[
+        unicode=true,
+        %pdfauthor={},
+        %pdfsubject={},
+        %pdftitle={},
+        %pdfkeywords={},
+        bookmarks=false,
+        breaklinks=true,
+        colorlinks=true,
+        linkcolor=black,
+        citecolor=black,
+        urlcolor=black,
+        %pdfstartpage=19,
+        pdfpagelayout=SinglePage
+        ]{hyperref}
+        %enables correct jumping to figures when referencing
+        \usepackage[all]{hypcap}
+    \else
+        \usepackage{hyperref}
+    \fi
+\fi
+\hypersetup{breaklinks=true, pdfborder={0 0 0}}
+\setlength{\parindent}{15pt} % set to 0pt if you want no indent in the first line of a paragraph
+%\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{3}
+%\EndDefineVerbatimEnvironment{Highlighting}
+
+\raggedbottom % allow ragged page bottoms
+
+\def\tightlist{} % fix error when translating md lists to itemize
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%Works on MiKTeX only
+%hint by http://goemonx.blogspot.de/2012/01/pdflatex-ligaturen-und-copynpaste.html
+%This allows a copy'n'paste of the text from the paper
+\input glyphtounicode.tex
+\pdfgentounicode=1
+
+$if(title)$
+\title{$title$}
+$endif$
+%If Title is too long, use \titlerunning
+%\titlerunning{Short Title}
+%Single insitute
+$if(author)$
+\author{$author$}
+$endif$
+
+%If there are too many authors, use \authorrunning
+%\authorrunning{First Author et al.}
+
+
+\institute{
+$if(email)$
+\email{$email$}
+$endif$
+$if(institute)$
+\\$institute$
+$endif$
+$if(university)$
+\\$university$
+$endif$
+}
+
+%Multiple insitutes
+%Currently disabled
+%
+\iffalse
+\authorinfo{
+  $for(author)$$author.name$$sep$\and $endfor$
+}{
+$for(organization)$
+  $organization.name$
+$endfor$
+}{
+  \{$for(author)$$author.email$$sep$,$endfor$\}
+}
+\fi
+
+
+\maketitle
+
+$if(abstract)$
+	\begin{abstract}
+		$abstract$
+	\end{abstract}
+$endif$
+
+$if(keywords)$
+	\keywords{$keywords$}
+$endif$
+
+$body$
+
+\end{document}
