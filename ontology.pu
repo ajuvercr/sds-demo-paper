@@ -29,6 +29,14 @@ rectangle RecordType #LightSkyBlue {
   [sds:Record] as rec
 }
 
+rectangle Record #Khaki {
+  [sds:Record] as r
+  [some payload] as payload
+  [sds:Stream] as str
+}
+
+' center
+
 [sds:Stream] as stream
 [sh:ShapeNode] as shNode
 [p-plan:Entity] as entity
@@ -58,6 +66,13 @@ act --> step : "p-plan:correspondsToStep"
 ' Record
 imm --|> mem
 mem --|> rec
+
+
+' record instances
+
+r -up-> rec : "rdfs:type"
+r --> payload : "sds:payload"
+r --> str : "sds:stream"
 
 @enduml
 
