@@ -56,7 +56,7 @@ We set up a new interface for the Belgian street name registry and demonstrate t
 
 **DCTerms, DCAT and VoID** Exposing metadata about datasets is long established. Dublin Core Terms (DCTerms) can be used to provide basic information about resources, providing terms like _title_, _author_, _description_ and _subject_[@DCTerms]. Data Catalog Vocabulary (DCAT) is designed to facilitate interoperability between data catalogs published on the web[@DCAT]. DCAT also provides terms like _license_, which makes it possible to define a new license for an interface. The Vocabulary of Interlinked Datasets (VoID) focuses on explicitly linking datasets together on some predicate and defining subset datasets[@VOID].
 
-**LDES** Linked Data Event Streams is a way of exposing immutable objects with HTTP resources. These resources can be divided into fragments that are linked together. A view description describes the meaning of the fragments and their links[@LDES]. Fragmentations are used to spread the items over different HTTP resources. Each HTTP resource can, for example, hold all items that start with a particular letter.  <!-- this is a reference to LDES paper -->
+**LDES** Linked Data Event Streams is a way of exposing immutable objects with HTTP resources. These resources can be divided into fragments that are linked together. Fragmentations are used to spread the items over different HTTP resources. Each HTTP resource can, for example, hold all items that start with a particular letter. A view description describes the meaning of the fragments and their links[@LDES].   <!-- this is a reference to LDES paper -->
 
 **VoCaLS**: Vocabulary of interoperable streams & On a Web of Data Streams (Dell Aglio): extends the ideas of DCAT with more information about streaming data[@VoCaLS]. The work defines a stream slightly differently than in this paper. VoCaLS focuses on streams that generate high throughput updates, this requires processors to use a windowing mechanism. In this paper, a stream is seen more broadly as a growing collection of objects, updates or otherwise.
 
@@ -76,7 +76,7 @@ The SDS description can be expanded with metadata about the dataset collected fr
 
 <!--sds Record zijn objecten dat dataset objecten verbinden aan de huidige stream. Nuttig want dan kan je met een transformatie (meta)data toevoegen aan sds Record, maar niet aan de dataset. (stub bucketization)-->
 <!--   push only data structure: je kan informatie over meerdere streams op dezelfde push only data structure zetten, zoals gewoon appenden naar een file-->
-Linking specific items to the correct stream is done with `sds:Record`. An `sds:Record` points to the data and the corresponding stream. These small objects make it possible that multiple streams to use the same channel. Each transformation can thus push `sds:Record`'s and leave the original stream intact. A stream of immutable objects can still be transformed, this transformation can, for example, calculate a hash or add a fragment id to the `sds:Record` object. The yellow part of Figure \ref{onto} gives a visual overview of `sds:Record`.
+Linking specific items to the correct stream is done with `sds:Record`. An `sds:Record` points to the data (`sds:payload`) and the corresponding stream (`sds:stream`). These small objects make it possible for multiple streams to use the same channel. Each transformation can thus push `sds:Record`'s and leave the original stream intact. A stream of immutable objects can still be transformed, this transformation can, for example, calculate a hash or add a fragment id to the `sds:Record` object. The yellow part of Figure \ref{onto} gives a visual overview of `sds:Record`.
 
 <!--  Figuurtje ofzo met de ontology -->
 ![SDS Ontology\label{onto}](./ontology.png)
@@ -86,13 +86,13 @@ Linking specific items to the correct stream is done with `sds:Record`. An `sds:
 
 Data published with Linked Data Event Streams can be partitioned or fragmented in a multitude of ways. This helps query agents resolve their queries with as few web requests as possible. A default fragmentation constitutes a timestamp fragmentation, this allows clients to replicate and synchronize the dataset efficiently. A substring fragmentation, on the other hand, makes autocompletion more efficient[@Substring].
 
-In this demo, we set up a pipeline that takes an existing LDES that exposes the registry of street names with a timestamp fragmentation. The pipeline calculates a substring fragmentation based on the name of the street and exposes a new LDES with the corresponding SDS Description.
+In this demo, we set up a pipeline starting from an existing LDES that exposes the registry of street names with a timestamp fragmentation. The pipeline calculates a substring fragmentation based on the name of the street and exposes a new LDES with the corresponding SDS Description.
 
 When asking a query agent "What are the 10 latest updated street names?" starting from the newly created LDES, the query agent can derive from the SDS description that the current LDES is not suitable for this query. This query would require the query agent to request the entire LDES tree and manually find the 10 latest updates, whereas following the links from the SDS description back to the original LDES, this query would only require one or two HTTP requests.
 
 Note that the original LDES does not expose an SDS description, so this has to be bootstrapped in the pipeline.
 
-To execute this pipeline we use a proof of concept pipeline runner called Nautirust. This makes it easy to start the three required processes with the correct arguments. The three required steps are: read the original LDES with an LDES client, add buckets to the SDS Records and ingest the new SDS records in an LDES server.
+To execute this pipeline we use a proof of concept pipeline runner called Nautirust[@Nautirust]. This makes it easy to start the three required processes with the correct arguments. The three required steps are: read the original LDES with an LDES client, add buckets to the SDS Records and ingest the new SDS records in an LDES server.
 
 
 # Conclusion
