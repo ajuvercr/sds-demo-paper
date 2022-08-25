@@ -13,9 +13,11 @@ jobs:
       - uses: ajuvercr/markdown-templates@v1
         with:
           paper: sds-demo
+          location: ${{github.workspace}}/
+      - run: echo '<a href="./sds-demo-lncs.pdf">SDS (lncs)</a><a href="./sds-demo-acm.pdf">SDS (acm)</a><a href="./sds-demo-ieee.pdf">SDS (ieee)</a>' > ${{github.workspace}}/out/index.html
       - uses: peaceiris/actions-gh-pages@v3
         with:
           target_branch: gh-pages
-          publish_dir: ./out
+          publish_dir: ${{github.workspace}}/out
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
