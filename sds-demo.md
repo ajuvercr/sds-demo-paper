@@ -2,16 +2,19 @@
 title: "Describing a network of live datasets with the SDS vocabulary"
 date: \today
 author:
-- Arthur Vercruysse
-- Sitt Min Oo
-- Wout Slabbinck
-- Pieter Colpaert
+- name: Arthur Vercruysse
+  institute: Ghent University
+- name: Sitt Min Oo
+  institute: Ghent University
+- name: Wout Slabbinck
+  institute: Ghent University
+- name: Pieter Colpaert
+  institute: Ghent University
 institute: "Ghent University"
 bibliography: "bibliography.bib"
 link-citations: true
 urlcolor: "blue"
-keywords: "LDES, Linked Data, Provenance"
-university: UGent university
+keywords: "LDES, Linked Data, Provenance, Dataset selection"
 abstract: |
   <!-- Context -->
   Datasets can be transformed by activities and often originates from a different live dataset.
@@ -41,7 +44,7 @@ Each stream can be fragmented in a different way to accommodate the needs of the
 
 <!-- helps the query agent understand that the datasets contain the same data and that the geospatial interface will be more efficient for this application. -->
 Using different LDESes to publish different fragmentations of the same data exposes a plethora of interfaces which makes decent provenance a necessity. 
-The provenance should cover the two steps a query agent takes to query an interface[@QueryDiscovery1;@QueryDiscovery2]:  
+The provenance should cover the two steps a query agent takes to query an interface [@QueryDiscovery1;@QueryDiscovery2]:  
 
 1. _Dataset discovery_: based on whether a dataset is going to contain statements that contribute to solving the query
 2. _Interface discovery_: selecting the right interface that publishes the dataset
