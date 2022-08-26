@@ -16,12 +16,8 @@ link-citations: true
 urlcolor: "blue"
 keywords: "LDES, Linked Data, Provenance, Dataset selection"
 abstract: |
-  <!-- Context -->
-  Datasets often originate from transformations on different datasets.
-  Datasets can be transformed by activities and often originates from a different live dataset.
   <!-- Need -->
-  Multiple published datasets can be the result of the same initial dataset. We want to give query processors transparency in how datasets are linked.
-  <!-- Task -->
+  Multiple datasets can be derived from the same data, by transforming the objects on the incoming data stream. We want to give query processors transparency in how these datasets are related and what they contain.
   <!-- Object -->
   In this paper, we introduce the Smart Data Specification for Semantically Describing Streams (SDS) to annotate datasets with provenance information, describing the consumed stream and the applied transformations on that stream.
   <!-- Findings -->
@@ -34,9 +30,9 @@ abstract: |
 
 # Introduction
 
-Data portals publish datasets, which can be derived from different datasets. This leads to a problem: when datasets are not accompanied by provenance information, the data portal has difficulty knowing whether or not this data is already published. Also, during dataset selection query agents are clueless as to what interfaces provide the same underlying data and as a fallback, they query the same underlying dataset multiple times. 
+Data portals publish live datasets derived from streams. Streams are often related with other streams by transforming their data. This leads to a problem: when datasets are not accompanied by provenance information, the data portal has difficulty knowing whether or not this data is already published. Also, during dataset selection query agents are clueless as to what interfaces provide the same underlying data and as a fallback, they query the same underlying dataset multiple times. 
 
-In a GPS application that notifies the user about changes in routes due to construction sites, multiple interfaces can be used. 
+For example in a GPS application that notifies the user about changes in routes due to construction sites, multiple interfaces can be used. 
 A time-based interface makes it easy to track the latest changes. 
 On the other hand, a geospatial-based interface makes it easy to calculate whether or not a construction site will be encountered on a route.
 A SPARQL endpoint can be the solution if low availability and operation cost are of no concern[@SPARQL].
@@ -44,7 +40,7 @@ Another possibility is to publish multiple Linked Data Event Streams (LDES)[@LDE
 Each stream can be fragmented in a different way to accommodate the needs of the users. 
 
 <!-- helps the query agent understand that the datasets contain the same data and that the geospatial interface will be more efficient for this application. -->
-Using different LDESes to publish different fragmentations of the same data exposes a plethora of interfaces which makes decent provenance a necessity. 
+Tailoring dataset interfaces to particular needs results in a plethora of interfaces which makes decent provenance a necessity.
 The provenance should cover the two steps a query agent takes to query an interface [@QueryDiscovery1;@QueryDiscovery2]:  
 
 1. _Dataset discovery_: based on whether a dataset is going to contain statements that contribute to solving the query
@@ -57,7 +53,7 @@ We set up a new interface for the Belgian street name registry and demonstrate t
 
 **DCTerms, DCAT and VoID**: Exposing metadata about datasets is long established. Dublin Core Terms (DCTerms) can be used to provide basic information about resources, providing terms like _title_, _author_, _description_ and _subject_[@DCTerms]. Data Catalog Vocabulary (DCAT) is designed to facilitate interoperability between data catalogs published on the web[@DCAT]. DCAT also provides terms like _license_, which makes it possible to define a new license for an interface. The Vocabulary of Interlinked Datasets (VoID) focuses on explicitly linking datasets together on some predicate and defining subset datasets[@VOID].
 
-**LDES**: Linked Data Event Streams is a way of exposing immutable objects with HTTP resources. These resources can be divided into fragments that are linked together. Fragmentations are used to spread the items over different HTTP resources. Each HTTP resource can, for example, hold all items that start with a particular letter. A view description describes the meaning of the fragments and their links[@LDES].   <!-- this is a reference to LDES paper -->
+**LDES**: Linked Data Event Streams is a way of exposing an evergrowing set of immutable objects. These objects can be divided into fragments as HTTP resources that are linked together with the TREE specification [@TREE]. Fragmentations are used to spread the items over different HTTP resources. Each HTTP resource can, for example, hold all items that start with a particular letter. A view description describes the meaning of the fragments and their links[@LDES].   <!-- this is a reference to LDES paper -->
 
 **VoCaLS**: Vocabulary of interoperable streams & On a Web of Data Streams (Dell Aglio): extends the ideas of DCAT with more information about streaming data[@VoCaLS]. The work defines a stream slightly differently than in this paper. VoCaLS focuses on streams that generate high throughput updates, this requires processors to use a windowing mechanism. In this paper, a stream is seen more broadly as a growing collection of objects, updates or otherwise.
 
@@ -69,7 +65,7 @@ We set up a new interface for the Belgian street name registry and demonstrate t
 A stream in the context of SDS is a _physical_ live channel that carries updates or items. A dataset can be derived from a stream as the collection of all updates or items. A _physical_ channel can be any medium like a Kafka stream, WebSocket stream or even a file where updates are appended. A stream can carry any data: CSV rows, mutable or immutable linked data objects, video stream bytes, etc.
 
 <!--een stream kan gemaakt worden van een andere stream na een transformatie. Deze transformatie wordt omschreven in de SDS description. Zo kan je informatie vinden over de net gevonden stream (stub naar source selection in query agents)-->
-A stream can be derived from a transformation applied to items on a different stream. This transformation should be described with `p-plan` in the SDS description that is part of the resulting stream. The stream and the transformation correspond with `p:plan:Entity` and `p-plan:Activity` respectively. This is shown as the pink part of Figure \ref{onto}. The transformation can  `prov:used` a different stream.
+A stream can be derived from a transformation applied to items of a different stream. This transformation is described with `p-plan` in the SDS description that is part of the resulting stream. The stream and the transformation correspond with `p:plan:Entity` and `p-plan:Activity` respectively. This is shown as the pink part of Figure \ref{onto}. The transformation links to the previous stream with the `prov:used` predicate.
 With the power of the `p-plan`, query agents can understand how datasets are linked and what interface fits a specific query the best.
 
 <!--sds dataset verwijst naar metadata over de dataset dat opgebouwd wordt door deze stream-->
@@ -77,7 +73,7 @@ The SDS description can be expanded with metadata about the dataset collected fr
 
 <!--sds Record zijn objecten dat dataset objecten verbinden aan de huidige stream. Nuttig want dan kan je met een transformatie (meta)data toevoegen aan sds Record, maar niet aan de dataset. (stub bucketization)-->
 <!--   push only data structure: je kan informatie over meerdere streams op dezelfde push only data structure zetten, zoals gewoon appenden naar een file-->
-Linking specific items to the correct stream is done with `sds:Record`. An `sds:Record` points to the data (`sds:payload`) and the corresponding stream (`sds:stream`). These small objects make it possible for multiple streams to use the same channel. Each transformation can thus push `sds:Record`'s and leave the original stream intact. A stream of immutable objects can still be transformed. This transformation can, for example, calculate a hash or add a fragment id to the `sds:Record` object. The yellow part of Figure \ref{onto} gives a visual overview of `sds:Record`.
+Linking specific items to the correct stream is done with `sds:Record`. An `sds:Record` points to the data (`sds:payload`) and the corresponding stream (`sds:stream`). These small objects make it possible for multiple streams to use the same channel. Each transformation can thus push `sds:Record`'s and leave the original stream intact. A stream of immutable objects can still be transformed, for example, to calculate a hash or add a fragment id to the `sds:Record` object. The yellow part of Figure \ref{onto} gives a visual overview of `sds:Record`.
 
 <!--  Figuurtje ofzo met de ontology -->
 ![SDS Ontology\label{onto}](./ontology.png)
@@ -100,8 +96,7 @@ To execute this pipeline we use a proof of concept pipeline runner called Nautir
 
 With the introduction of the SDS ontology, it is possible to add a description to a stream and the resulting dataset, that provides provenance. The provenance links streams together and transformations applied to the stream. The SDS ontology aligns well with well-established ontologies like DCAT and P-Plan to maximize interoperability.
 
-The SDS description makes it possible for query agents to automatically select the right dataset and interface based on a given query.
-
+With the SDS description, the query agent can now automatically select the right dataset and interface based on a given query.
 
 Federated query processors, that utilize source selection based on this provenance information when selecting a dataset and interface to query the dataset, are still future work. 
 
