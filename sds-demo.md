@@ -23,12 +23,12 @@ abstract: |
   <!-- Conclusion -->
   The SDS vocabulary and application profile bring together DCAT-AP, LDES and P-Plan.
   <!-- Perspective -->
-  In future work, we will create a source selection strategy for federated query processors that take into account this provenance information when selecting a dataset and interface to query the dataset. 
+  In future work, we will create a source selection strategy for federated query processors that considers this provenance information when selecting a dataset and interface to query the dataset. 
 ---
 
 # Introduction
 
-Data portals publish live datasets derived from streams. Streams are often related to other streams by transforming their data. This leads to a problem: when datasets are not accompanied by provenance information, the data portal has difficulty knowing whether or not this data is already published. Also, during dataset selection query agents are clueless as to what interfaces provide the same underlying data and as a fallback, they query the same data multiple times. 
+Data portals publish live datasets derived from streams. Streams are often related to other streams by transforming their data. This leads to problems when datasets are not accompanied by provenance information, the data portal has difficulty knowing whether or not this data is already published. Also, during dataset selection query agents are clueless as to what interfaces provide the same underlying data and as a fallback, they query the same data multiple times. 
 
 For example in a GPS application that notifies the user about changes in routes due to construction sites, multiple (query) interfaces can be used. 
 A time-based interface makes it easy to track the latest changes. 
@@ -51,7 +51,7 @@ We set up a new interface for the Belgian street name registry and demonstrate t
 
 **DCTerms, DCAT and VoID**: Exposing metadata about datasets is long established. Dublin Core Terms (DCTerms) can be used to provide basic information about resources, providing terms like _title_, _author_, _description_ and _subject_[@DCTerms]. Data Catalog Vocabulary (DCAT) is designed to facilitate interoperability between data catalogs published on the web[@DCAT]. DCAT also provides terms like _license_, which makes it possible to define a new license for an interface. The Vocabulary of Interlinked Datasets (VoID) focuses on explicitly linking datasets together on some predicate and defining subset datasets[@VOID].
 
-**LDES**: Linked Data Event Streams is a way of exposing an evergrowing set of immutable objects. These objects can be divided into fragments as HTTP resources that are linked together with the TREE specification [@TREE]. Fragmentations are used to provide semantic meaning to links between HTTP resources. Each HTTP resource can, for example, hold all items that start with a particular letter. A view description is used to define the meaning of the fragments and their links[@LDES].   <!-- this is a reference to LDES paper -->
+**LDES**: Linked Data Event Streams is a way of exposing an evergrowing set of immutable objects. These objects can be divided into fragments as HTTP resources that are linked together with the TREE specification. Fragmentations are used to provide semantic meaning to links between HTTP resources. Each HTTP resource can, for example, hold all items that start with a particular letter. A view description is used to define the meaning of the fragments and their links[@LDES].   <!-- this is a reference to LDES paper -->
 
 **VoCaLS**: Vocabulary of interoperable streams & On a Web of Data Streams (Dell Aglio): extends the ideas of DCAT with more information about streaming data[@VoCaLS]. The work defines a stream slightly differently than in this paper. VoCaLS focuses on streams that generate high throughput updates, this requires processors to use a windowing mechanism. In this paper, a stream is seen more broadly as a growing collection of objects, updates or otherwise.
 
@@ -84,8 +84,6 @@ Data published with Linked Data Event Streams can be partitioned or fragmented i
 In this demo, we set up a pipeline starting from an existing LDES that exposes the registry of street names with a timestamp fragmentation. The pipeline calculates a substring fragmentation based on the name of the street and exposes a new LDES with the corresponding SDS Description and substring fragmentation.
 
 When asking a query agent "What are the 10 latest updated street names?" starting from the newly created LDES, the query agent can derive from the SDS description that the current LDES is not suitable for this query. This query would require the query agent to request the entire LDES tree and manually find the 10 latest updates, whereas following the links from the SDS description back to the original LDES, this query would only require a few HTTP requests. One HTTP request gets the SDS description. The other requests get the latest updates due to the timestamp-based fragmentation. 
-
-Note that the original LDES does not expose an SDS description, so this has to be bootstrapped in the pipeline.
 
 To execute this pipeline we use a proof of concept pipeline runner called Nautirust[@Nautirust]. This makes it easy to start the three required processes with the correct arguments. The three required steps are: read the original LDES with an LDES client, add buckets to the SDS Records and ingest the new SDS records in an LDES server.
 
