@@ -24,9 +24,9 @@ rectangle Activity #LightPink {
 }
 
 rectangle RecordType #LightSkyBlue {
-  [sds:ImmutableMember] as imm
-  [sds:Member] as mem
-  [sds:Record] as rec
+  interface "sds:ImmutableMember" as imm
+  interface "sds:Member" as mem
+  interface "sds:Record" as rec
 }
 
 rectangle Record #Khaki {
@@ -64,8 +64,8 @@ act --> entity : "prov:used"
 act --> step : "p-plan:correspondsToStep"
 
 ' Record
-imm --|> mem
-mem --|> rec
+imm --|> mem : "rdfs:subClassOf"
+mem --|> rec : "rdfs:subClassOf"
 
 
 ' record instances

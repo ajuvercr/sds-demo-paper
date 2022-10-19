@@ -1,38 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="486px" preserveAspectRatio="none" style="width:959px;height:486px;background:#FFFFFF;" version="1.1" viewBox="0 0 959 486" width="959px" zoomAndPan="magnify"><defs/><g><!--MD5=[8bd827e509459be1ba63ea5dfdf379d3]
-cluster Dataset--><g id="cluster_Dataset"><rect fill="#90EE90" height="353" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="233" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="97" y="23.9659">Dataset</text></g><!--MD5=[e5a525a231220a5ab503d3943024a9c4]
-cluster Activity--><g id="cluster_Activity"><rect fill="#FFB6C1" height="213" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="358" x="264" y="267"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="416.5" y="283.9659">Activity</text></g><!--MD5=[ce1e5ccc019fb307e57da6fba90792da]
-cluster RecordType--><g id="cluster_RecordType"><rect fill="#87CEFA" height="353" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="210" x="743" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="81" x="807.5" y="23.9659">RecordType</text></g><!--MD5=[c9cfb4b39356f1f146c3d749b4a5e5d9]
-entity ldes--><g id="elem_ldes"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="137" x="42.5" y="45"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="52.5" y="69.9659">ldes:EventStream</text></g><!--MD5=[2d3a5dca07f2dc2995b083b822c2fe99]
-entity tree--><g id="elem_tree"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="117" x="52.5" y="163"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="62.5" y="187.9659">tree:Collection</text></g><!--MD5=[b8de523b24ec101758821f27a12ea43c]
-entity sh--><g id="elem_sh"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="62" x="23" y="305"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="33" y="329.9659">Shape</text></g><!--MD5=[727c1040af9be188ab17d19c49f9ac10]
-entity ds--><g id="elem_ds"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="120" y="305"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="130" y="329.9659">dcat:Dataset</text></g><!--MD5=[acebe9e291a1068bd7b4ed034caf4af9]
-entity act--><g id="elem_act"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="116" x="490" y="305"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="500" y="329.9659">p-plan:Activity</text></g><!--MD5=[84dc800bab7008b76b1002cd93200188]
-entity RML--><g id="elem_RML"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="49" x="405.5" y="305"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="415.5" y="329.9659">RML</text></g><!--MD5=[df13142ab6aee147a3c43606b9ab4f0a]
-entity Bucketizer--><g id="elem_Bucketizer"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="90" x="280" y="305"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="290" y="329.9659">Bucketizer</text></g><!--MD5=[a2c7fa4b5b75d5753a262bf825bbb334]
-entity step--><g id="elem_step"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="334" y="425"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="344" y="449.9659">p-plan:Step</text></g><!--MD5=[e8a361aedfe79748d04f36e40d9faf2b]
-entity imm--><g id="elem_imm"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="178" x="759" y="45"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158" x="769" y="69.9659">sds:ImmutableMember</text></g><!--MD5=[e35db7c651b6c460ad2880ac9bc676be]
-entity mem--><g id="elem_mem"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="794" y="163"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="804" y="187.9659">sds:Member</text></g><!--MD5=[0330432914290acc6fa0b9d79f63f330]
-entity rec--><g id="elem_rec"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="94" x="780" y="305"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="790" y="329.9659">sds:Record</text></g><!--MD5=[2ee8f007009a1d04c47bfc8d50681d61]
-entity stream--><g id="elem_stream"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="555.5" y="163"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="565.5" y="187.9659">sds:Stream</text></g><!--MD5=[97ad5ad00ae7ad49c0967aa2ee6643a2]
-entity shNode--><g id="elem_shNode"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118" x="544" y="45"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="554" y="69.9659">sh:ShapeNode</text></g><!--MD5=[fbcd1a1664252f7f7ddf883fed3c1e0a]
-entity entity--><g id="elem_entity"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="650" y="425"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="660" y="449.9659">p-plan:Entity</text></g><!--MD5=[38eb9ce4ab1719c87080ecb6b0e9ceb3]
-link ldes to tree--><g id="link_ldes_tree"><path d="M111,84.14 C111,99.87 111,122.9 111,142.62 " fill="none" id="ldes-to-tree" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="118,142.91,111,162.91,104,142.91,118,142.91" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[44617088dde83f13b463a0c17aa02736]
-link tree to sh--><g id="link_tree_sh"><path d="M97.95,202.11 C88.36,215.79 77,232 77,232 C77,232 66.7,272.99 59.88,300.1 " fill="none" id="tree-to-sh" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="58.65,304.98,64.7188,297.2231,59.866,300.1301,56.959,295.2774,58.65,304.98" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="78" y="246.897">tree:shape</text></g><!--MD5=[66b56c6c1dee28cb82750bd4e5caca2a]
-link tree to ds--><g id="link_tree_ds"><path d="M124.43,202.11 C134.3,215.79 146,232 146,232 C146,232 154.1,260.51 161.26,285.7 " fill="none" id="tree-to-ds" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="168.01,283.83,166.74,304.98,154.54,287.66,168.01,283.83" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4afc087163b860e430c6bb7caa4609e0]
-reverse link shNode to stream--><g id="link_shNode_stream"><path d="M603,89.17 C603,110.98 603,142.89 603,162.91 " fill="none" id="shNode-backto-stream" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="603,84.14,599,93.14,603,89.14,607,93.14,603,84.14" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="604" y="128.897">sds:shape</text></g><!--MD5=[f183db16317c647cd439773754314082]
-link stream to entity--><g id="link_stream_entity"><path d="M635.24,202.11 C658.92,215.79 687,232 687,232 C687,232 695.42,343.33 700.05,404.44 " fill="none" id="stream-to-entity" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="707.05,404.26,701.58,424.73,693.09,405.32,707.05,404.26" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f6a2fd09cd65592d78fc59c3acc4ec4b]
-link stream to act--><g id="link_stream_act"><path d="M578.44,202.11 C560.39,215.79 539,232 539,232 C539,232 539,251 539,251 C539,251 542.41,278.49 545.04,299.62 " fill="none" id="stream-to-act" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="545.68,304.83,548.5428,295.4064,545.0651,299.868,540.6036,296.3902,545.68,304.83" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="142" x="540" y="246.897">p-plan:wasGeneratedBy</text></g><!--MD5=[6a51748e925c9754b4368ae2ee64cf28]
-link stream to rec--><g id="link_stream_rec"><path d="M650.66,201.56 C687.05,215.35 731,232 731,232 C731,232 775.44,274.36 803.85,301.43 " fill="none" id="stream-to-rec" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="807.57,304.98,803.8123,295.8762,803.9497,301.5314,798.2945,301.6687,807.57,304.98" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="750" y="246.897">sds:carries</text></g><!--MD5=[df602a197be5029e84cbe3e493ff3a16]
-link stream to ds--><g id="link_stream_ds"><path d="M555.15,194.16 C461.7,214.97 264,259 264,259 C264,259 229.56,283.14 202.83,301.89 " fill="none" id="stream-to-ds" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="198.61,304.84,208.2765,302.9535,202.7055,301.9717,203.6873,296.4007,198.61,304.84" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="385" y="246.897">sds:dataset</text></g><!--MD5=[6ac2390ea926f5d77f57652ed186811f]
-link RML to step--><g id="link_RML_step"><path d="M414.6,344.02 C402.61,358.43 388,376 388,376 C388,376 386.99,389.58 385.88,404.55 " fill="none" id="RML-to-step" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="392.85,405.27,384.39,424.7,378.89,404.23,392.85,405.27" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[db890c05c5052e114f5a96d11d9f2791]
-link Bucketizer to step--><g id="link_Bucketizer_step"><path d="M334.19,344.2 C342.42,360.94 354.73,385.98 364.92,406.73 " fill="none" id="Bucketizer-to-step" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="371.31,403.85,373.85,424.89,358.75,410.03,371.31,403.85" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a3ecbff88989891684c78d0fcf512d3b]
-link act to entity--><g id="link_act_entity"><path d="M567.56,344.12 C589.19,364.71 621,395 621,395 C621,395 645.09,409.25 667.15,422.3 " fill="none" id="act-to-entity" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="671.53,424.89,665.8193,416.8658,667.2262,422.3449,661.7471,423.7519,671.53,424.89" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="622" y="390.897">prov:used</text></g><!--MD5=[35a7b84dc368bb1a3bb4670ac91d494a]
-link act to step--><g id="link_act_step"><path d="M514.89,344.02 C494.41,355.47 472,368 472,368 C472,368 433,376 433,376 C433,376 414.61,400.83 400.14,420.37 " fill="none" id="act-to-step" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="396.93,424.7,405.4996,419.846,399.9048,420.6812,399.0695,415.0863,396.93,424.7" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="158" x="434" y="390.897">p-plan:correspondsToStep</text></g><!--MD5=[6e17b4c11c7524f362a716f7e4e0273a]
-link imm to mem--><g id="link_imm_mem"><path d="M847.68,84.14 C847.41,99.87 847.01,122.9 846.67,142.62 " fill="none" id="imm-to-mem" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="853.66,143.03,846.32,162.91,839.67,142.79,853.66,143.03" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[77e02154ea0423dae40507bed8cf31f9]
-link mem to rec--><g id="link_mem_rec"><path d="M844.33,202.3 C842.55,222.28 840,251 840,251 C840,251 837,267.71 833.89,285.09 " fill="none" id="mem-to-rec" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="840.77,286.38,830.35,304.83,826.99,283.91,840.77,286.38" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[05d6e804e8733e4bd59d7a4463d6e989]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="692px" preserveAspectRatio="none" style="width:1064px;height:692px;background:#00000000;" version="1.1" viewBox="0 0 1064 692" width="1064px" zoomAndPan="magnify"><defs/><g><!--MD5=[8bd827e509459be1ba63ea5dfdf379d3]
+cluster Dataset--><g id="cluster_Dataset"><rect fill="#90EE90" height="390.5" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="233" x="7" y="19.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="97" y="36.4659">Dataset</text></g><!--MD5=[e5a525a231220a5ab503d3943024a9c4]
+cluster Activity--><g id="cluster_Activity"><rect fill="#FFB6C1" height="249.5" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="358" x="264" y="317"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="416.5" y="333.9659">Activity</text></g><!--MD5=[ce1e5ccc019fb307e57da6fba90792da]
+cluster RecordType--><g id="cluster_RecordType"><rect fill="#87CEFA" height="415.5" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="206" x="775" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="81" x="837.5" y="23.9659">RecordType</text></g><!--MD5=[e0566008ecb034ce981c11fff920ca7b]
+cluster Record--><g id="cluster_Record"><rect fill="#F0E68C" height="213" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="276" x="782" y="473.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="48" x="896" y="490.4659">Record</text></g><!--MD5=[c9cfb4b39356f1f146c3d749b4a5e5d9]
+entity ldes--><g id="elem_ldes"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="137" x="42.5" y="57.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="52.5" y="82.4659">ldes:EventStream</text></g><!--MD5=[2d3a5dca07f2dc2995b083b822c2fe99]
+entity tree--><g id="elem_tree"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="117" x="52.5" y="200.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="62.5" y="225.4659">tree:Collection</text></g><!--MD5=[b8de523b24ec101758821f27a12ea43c]
+entity sh--><g id="elem_sh"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="62" x="23" y="355"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="33" y="379.9659">Shape</text></g><!--MD5=[727c1040af9be188ab17d19c49f9ac10]
+entity ds--><g id="elem_ds"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="120" y="355"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="130" y="379.9659">dcat:Dataset</text></g><!--MD5=[acebe9e291a1068bd7b4ed034caf4af9]
+entity act--><g id="elem_act"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="116" x="490" y="355"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="500" y="379.9659">p-plan:Activity</text></g><!--MD5=[84dc800bab7008b76b1002cd93200188]
+entity RML--><g id="elem_RML"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="49" x="405.5" y="355"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="415.5" y="379.9659">RML</text></g><!--MD5=[df13142ab6aee147a3c43606b9ab4f0a]
+entity Bucketizer--><g id="elem_Bucketizer"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="90" x="280" y="355"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="290" y="379.9659">Bucketizer</text></g><!--MD5=[a2c7fa4b5b75d5753a262bf825bbb334]
+entity step--><g id="elem_step"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="334" y="511.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="344" y="536.4659">p-plan:Step</text></g><!--MD5=[e8a361aedfe79748d04f36e40d9faf2b]
+entity imm--><g id="elem_imm"><ellipse cx="878" cy="77" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158" x="799" y="108.9659">sds:ImmutableMember</text></g><!--MD5=[e35db7c651b6c460ad2880ac9bc676be]
+entity mem--><g id="elem_mem"><ellipse cx="871" cy="220" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="829" y="251.9659">sds:Member</text></g><!--MD5=[0330432914290acc6fa0b9d79f63f330]
+entity rec--><g id="elem_rec"><ellipse cx="862" cy="374.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="825" y="406.4659">sds:Record</text></g><!--MD5=[cbf2a705c8c36a956106bd646f097c75]
+entity r--><g id="elem_r"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="94" x="815" y="511.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="825" y="536.4659">sds:Record</text></g><!--MD5=[c338edf484f2e4564cc4ca569e00c931]
+entity payload--><g id="elem_payload"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="113" x="798.5" y="631.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="808.5" y="656.4659">some payload</text></g><!--MD5=[1571e16190b30e1aa47a38a19d389071]
+entity str--><g id="elem_str"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="946.5" y="631.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="956.5" y="656.4659">sds:Stream</text></g><!--MD5=[2ee8f007009a1d04c47bfc8d50681d61]
+entity stream--><g id="elem_stream"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="571.5" y="200.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="581.5" y="225.4659">sds:Stream</text></g><!--MD5=[97ad5ad00ae7ad49c0967aa2ee6643a2]
+entity shNode--><g id="elem_shNode"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118" x="560" y="57.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="570" y="82.4659">sh:ShapeNode</text></g><!--MD5=[fbcd1a1664252f7f7ddf883fed3c1e0a]
+entity entity--><g id="elem_entity"><rect fill="#F1F1F1" height="39.0679" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="650" y="511.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="660" y="536.4659">p-plan:Entity</text></g><!--MD5=[38eb9ce4ab1719c87080ecb6b0e9ceb3]
+link ldes to tree--><g id="link_ldes_tree"><path d="M111,96.72 C111,117.9 111,152.96 111,180.12 " fill="none" id="ldes-to-tree" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="118,180.2,111,200.2,104,180.2,118,180.2" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[44617088dde83f13b463a0c17aa02736]
+link tree to sh--><g id="link_tree_sh"><path d="M100.61,239.63 C90.62,257.57 77,282 77,282 C77,282 66.7,322.99 59.88,350.1 " fill="none" id="tree-to-sh" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="58.65,354.98,64.7188,347.2231,59.866,350.1301,56.959,345.2774,58.65,354.98" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="78" y="296.897">tree:shape</text></g><!--MD5=[66b56c6c1dee28cb82750bd4e5caca2a]
+link tree to ds--><g id="link_tree_ds"><path d="M121.69,239.63 C131.98,257.57 146,282 146,282 C146,282 154.1,310.51 161.26,335.7 " fill="none" id="tree-to-ds" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="168.01,333.83,166.74,354.98,154.54,337.66,168.01,333.83" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4afc087163b860e430c6bb7caa4609e0]
+reverse link shNode to stream--><g id="link_shNode_stream"><path d="M619,102.03 C619,129.79 619,174.88 619,200.2 " fill="none" id="shNode-backto-stream" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="619,96.72,615,105.72,619,101.72,623,105.72,619,96.72" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="620" y="153.897">sds:shape</text></g><!--MD5=[f183db16317c647cd439773754314082]
+link stream to entity--><g id="link_stream_entity"><path d="M639.77,239.63 C659.77,257.57 687,282 687,282 C687,282 695.98,421.19 700.48,491.01 " fill="none" id="stream-to-entity" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="707.5,490.95,701.8,511.36,693.52,491.85,707.5,490.95" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f6a2fd09cd65592d78fc59c3acc4ec4b]
+link stream to act--><g id="link_stream_act"><path d="M594.56,239.63 C571.04,257.57 539,282 539,282 C539,282 539,301 539,301 C539,301 542.41,328.49 545.04,349.62 " fill="none" id="stream-to-act" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="545.68,354.83,548.5428,345.4064,545.0651,349.868,540.6036,346.3902,545.68,354.83" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="142" x="540" y="296.897">p-plan:wasGeneratedBy</text></g><!--MD5=[6a51748e925c9754b4368ae2ee64cf28]
+link stream to rec--><g id="link_stream_rec"><path d="M652.3,239.63 C684.35,257.57 728,282 728,282 C728,282 814.57,341.11 848.54,364.31 " fill="none" id="stream-to-rec" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="852.79,367.21,847.6262,358.8234,848.6652,364.384,843.1046,365.4231,852.79,367.21" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="754" y="296.897">sds:carries</text></g><!--MD5=[df602a197be5029e84cbe3e493ff3a16]
+link stream to ds--><g id="link_stream_ds"><path d="M571.49,232.78 C474.76,256.76 264,309 264,309 C264,309 229.56,333.14 202.83,351.89 " fill="none" id="stream-to-ds" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="198.61,354.84,208.2765,352.9535,202.7055,351.9717,203.6873,346.4007,198.61,354.84" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="370" y="296.897">sds:dataset</text></g><!--MD5=[6ac2390ea926f5d77f57652ed186811f]
+link RML to step--><g id="link_RML_step"><path d="M417.63,394.06 C405.24,412.64 388,438.5 388,438.5 C388,438.5 386.47,466.45 385.11,491.45 " fill="none" id="RML-to-step" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="392.09,491.9,384.01,511.48,378.11,491.13,392.09,491.9" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[db890c05c5052e114f5a96d11d9f2791]
+link Bucketizer to step--><g id="link_Bucketizer_step"><path d="M332,394.14 C341.1,418.38 357.21,461.31 368.9,492.44 " fill="none" id="Bucketizer-to-step" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="375.5,490.11,375.98,511.3,362.4,495.03,375.5,490.11" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a3ecbff88989891684c78d0fcf512d3b]
+link act to entity--><g id="link_act_entity"><path d="M564.56,394.11 C586.1,418.3 621,457.5 621,457.5 C621,457.5 653.97,486.65 678.09,507.98 " fill="none" id="act-to-entity" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="681.88,511.33,677.7938,502.3688,678.1367,508.0153,672.4902,508.3582,681.88,511.33" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="622" y="453.397">prov:used</text></g><!--MD5=[35a7b84dc368bb1a3bb4670ac91d494a]
+link act to step--><g id="link_act_step"><path d="M522.27,394.12 C500.22,410.08 472,430.5 472,430.5 C472,430.5 438,438.5 438,438.5 C438,438.5 413.16,479.83 396.87,506.93 " fill="none" id="act-to-step" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="394.13,511.48,402.1904,505.8205,396.7025,507.1925,395.3305,501.7046,394.13,511.48" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="158" x="439" y="453.397">p-plan:correspondsToStep</text></g><!--MD5=[6e17b4c11c7524f362a716f7e4e0273a]
+link imm to mem--><g id="link_imm_mem"><path d="M877.58,86.4 C876.59,106.43 874.04,157.77 872.42,190.37 " fill="none" id="imm-to-mem" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="879.39,191.19,871.41,210.82,865.41,190.5,879.39,191.19" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="875" y="153.897">rdfs:subClassOf</text></g><!--MD5=[77e02154ea0423dae40507bed8cf31f9]
+link mem to rec--><g id="link_mem_rec"><path d="M870.52,229.2 C869.25,250.71 865.77,309.57 863.67,345.12 " fill="none" id="mem-to-rec" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="870.65,345.71,862.49,365.26,856.68,344.88,870.65,345.71" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="868" y="296.897">rdfs:subClassOf</text></g><!--MD5=[b7dc6f2229e466d745f804f781092543]
+reverse link rec to r--><g id="link_rec_r"><path d="M862,388.83 C862,416.41 862,479.82 862,511.41 " fill="none" id="rec-backto-r" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="862,383.81,858,392.81,862,388.81,866,392.81,862,383.81" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="863" y="453.397">rdfs:type</text></g><!--MD5=[0f193a6909803ba8ae9255c6dc991b70]
+link r to payload--><g id="link_r_payload"><path d="M860.17,550.52 C858.74,564.93 857,582.5 857,582.5 C857,582.5 856.29,606.5 855.71,625.88 " fill="none" id="r-to-payload" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="855.56,631.2,859.8161,622.3183,855.7032,626.2021,851.8194,622.0891,855.56,631.2" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71" x="858" y="597.397">sds:payload</text></g><!--MD5=[14d61bd37f5287539527148899004f63]
+link r to str--><g id="link_r_str"><path d="M888.4,550.52 C908.95,564.93 934,582.5 934,582.5 C934,582.5 956.44,607.75 973.87,627.36 " fill="none" id="r-to-str" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="977.29,631.2,974.3004,621.8159,973.9682,627.463,968.3211,627.1308,977.29,631.2" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="951" y="597.397">sds:stream</text></g><!--MD5=[d220f23c0cf366d6d5459da276b782f0]
 @startuml
 'skinparam linetype ortho
 skinparam linetype polyline
+skinparam backgroundcolor transparent
 
 skinparam sequenceMessageAlign direction
 
@@ -55,10 +63,18 @@ rectangle Activity #LightPink {
 }
 
 rectangle RecordType #LightSkyBlue {
-  [sds:ImmutableMember] as imm
-  [sds:Member] as mem
-  [sds:Record] as rec
+  interface "sds:ImmutableMember" as imm
+  interface "sds:Member" as mem
+  interface "sds:Record" as rec
 }
+
+rectangle Record #Khaki {
+  [sds:Record] as r
+  [some payload] as payload
+  [sds:Stream] as str
+}
+
+' center
 
 [sds:Stream] as stream
 [sh:ShapeNode] as shNode
@@ -87,13 +103,21 @@ act - -> entity : "prov:used"
 act - -> step : "p-plan:correspondsToStep"
 
 ' Record
-imm - -|> mem
-mem - -|> rec
+imm - -|> mem : "rdfs:subClassOf"
+mem - -|> rec : "rdfs:subClassOf"
+
+
+' record instances
+
+r -up-> rec : "rdfs:type"
+r - -> payload : "sds:payload"
+r - -> str : "sds:stream"
 
 @enduml
 
 @startuml
 skinparam linetype polyline
+skinparam backgroundcolor transparent
 
 skinparam sequenceMessageAlign direction
 
@@ -116,10 +140,17 @@ rectangle Activity #LightPink {
 }
 
 rectangle RecordType #LightSkyBlue {
-  [sds:ImmutableMember] as imm
-  [sds:Member] as mem
-  [sds:Record] as rec
+  interface "sds:ImmutableMember" as imm
+  interface "sds:Member" as mem
+  interface "sds:Record" as rec
 }
+
+rectangle Record #Khaki {
+  [sds:Record] as r
+  [some payload] as payload
+  [sds:Stream] as str
+}
+
 
 [sds:Stream] as stream
 [sh:ShapeNode] as shNode
@@ -144,8 +175,14 @@ stream - -> ds : "sds:dataset"
 act - -> entity : "prov:used"
 act - -> step : "p-plan:correspondsToStep"
 
-imm - -|> mem
-mem - -|> rec
+imm - -|> mem : "rdfs:subClassOf"
+mem - -|> rec : "rdfs:subClassOf"
+
+
+
+r -up-> rec : "rdfs:type"
+r - -> payload : "sds:payload"
+r - -> str : "sds:stream"
 
 @enduml
 
