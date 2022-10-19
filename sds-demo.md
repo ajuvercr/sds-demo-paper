@@ -85,7 +85,57 @@ Linking specific items to the correct stream is done with `sds:Record` objects. 
 
 Data published with Linked Data Event Streams can be partitioned or fragmented in a multitude of ways. This helps query agents resolve their queries as fast as possible whilst ingesting as little data as possible. A default fragmentation constitutes a timestamp fragmentation, this allows clients to replicate and synchronize the dataset efficiently. A substring fragmentation, on the other hand, makes autocompletion more efficient[@Substring].
 
-In this demo, we set up a pipeline starting from an existing LDES that exposes the registry of street names with a timestamp fragmentation. The pipeline calculates a substring fragmentation based on the name of the street and exposes a new LDES with the corresponding SDS Description and substring fragmentation.
+In this demo, we set up a pipeline starting from an existing LDES that exposes the registry of street names with a timestamp fragmentation. The pipeline calculates a substring fragmentation based on the name of the street and exposes a new LDES with the corresponding SDS Description and substring fragmentation. The published `tree:View`'s can then be associated with their respective `viewDescription` as described in .
+
+```turtle
+@prefix ex:     <http://example.org/ns#>.
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ldes:   <https://w3id.org/ldes#>.
+@prefix p-plan: <http://purl.org/net/p-plan#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix sds:    <https://w3id.org/sds#> .
+
+ex:MyLDES a ldes:EventStream;
+  dcat:title "An example LDES".
+
+# One fragmentation is based on an existing LDES
+ex:BasicFragmentation a tree:ViewDescription ; 
+  dcat:endpointURL </basic> ; # A rootnote from which you can access all members
+  dcat:servesDataset ex:MyLDES ; # the LDES
+  # This viewDescription was created by importing this stream
+  ldes:managedBy sds:LDESStream. 
+
+# The other fragmentation bucketizes the members before publishing
+ex:SubstringFragmentation a tree:ViewDescription ; 
+  dcat:endpointURL </substring> ; # A rootnote from which you can access all members
+  dcat:servesDataset ex:MyLDES ; # the LDES
+  # This viewDescription was created by importing this stream
+  ldes:managedBy sds:BucketizedStream. 
+
+
+ex:ImportLDES a p-plan:Activity;
+  rdfs:comment "Reads csv file and converts to rdf members";
+  prov:used <https://smartdata.dev-vlaanderen.be/base/gemeente>.
+
+ex:LDESStream a sds:Stream;
+  p-plan:wasGeneratedBy ex:ImportLDES;
+  sds:carries sds:Member.
+
+
+ex:BucketizeStrategy a ldes:BucketizeStrategy;
+    ldes:bucketType ldes:SubstringFragmentation; # zegt aan de client dat ik een timestampfragmentation aan het maken ben ***
+    tree:path rdfs:label; 
+    ldes:pageSize 50.
+
+ex:BucketizeStream a p-plan:Activiy;
+  rdfs:comment "Execute a substring bucketization on the incoming stream";
+  prov:used ex:LDESStream, ex:BucketizeStrategy.
+
+ex:BucketizedStream a sds:Stream;
+  p-plan:wasGeneratedBy ex:BucketizeStream;
+  sds:carries sds:Member.
+```
+*RDF sample creating two LDES Views from different Streams*
 
 When asking a query agent "What are the 10 latest updated street names?" starting from the newly created LDES, the query agent can derive from the SDS description that the current LDES is not suitable for this query. This query would require the query agent to request the entire LDES tree and manually find the 10 latest updates, whereas following the links from the SDS description back to the original LDES, this query would only require a few HTTP requests. One HTTP request gets the SDS description and another request gets the latest updates due to the timestamp-based fragmentation. 
 
